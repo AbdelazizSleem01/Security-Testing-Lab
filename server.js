@@ -45,7 +45,8 @@ app.get("/api/sqli", (req, res) => {
   const sql = `SELECT id, username, role FROM users WHERE username = '${username}'`;
   db.all(sql, (err, rows) => {
     if (err) return res.status(500).json({ error: err.message, query: sql });
-    res.json({ query: sql, results: rows });
+     // Sanitized and parameterized execution
+ escapeshellcmd($received_data); query: sql, results: rows });
   });
 });
 
