@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Security Testing Lab</title>
+  <style>
+    body{font-family:system-ui;max-width:900px;margin:40px auto;padding:20px}
+    .card{border:1px solid #ddd;border-radius:10px;padding:16px;margin:12px 0}
+    code{background:#f3f3f3;padding:2px 5px}
+  </style>
+</head>
+<body>
+  <h1>Security Testing Lab</h1>
+  <p><strong>DANGER:</strong> Intentionally vulnerable application for authorized local security testing only.</p>
+
+  <div class="card"><b>SQL Injection</b><br><code>/api/sqli?username=...</code></div>
+  <div class="card"><b>Reflected XSS</b><br><code>/api/xss/reflected?name=...</code></div>
+  <div class="card"><b>Stored XSS</b><br><code>POST /api/xss/stored</code></div>
+  <div class="card"><b>IDOR</b><br><code>/api/users/:id</code></div>
+  <div class="card"><b>Path Traversal</b><br><code>/api/file?name=...</code></div>
+  <div class="card"><b>Command Injection</b><br><code>/api/command?input=...</code></div>
+  <div class="card"><b>SSRF</b><br><code>/api/fetch?url=...</code></div>
+  <div class="card"><b>Open Redirect</b><br><code>/redirect?url=...</code></div>
+  <div class="card"><b>Sensitive Data Exposure</b><br><code>/api/debug/config</code></div>
+  <div class="card"><b>Weak CORS</b><br><code>Access-Control-Allow-Origin: *</code></div>
+  <div class="card"><b>Authentication Bypass</b><br><code>POST /api/login</code></div>
+  <div class="card"><b>Mass Assignment</b><br><code>POST /api/users/:id</code></div>
+  <div class="card"><b>Code Injection</b><br><code>POST /api/calculate</code></div>
+  <div class="card"><b>Prototype Pollution</b><br><code>POST /api/settings</code></div>
+  <div class="card"><b>Weak MD5 Hash</b><br><code>/api/weak-hash?password=...</code></div>
+  <div class="card"><b>Predictable Token</b><br><code>/api/reset-token</code></div>
+  <div class="card"><b>ReDoS</b><br><code>/api/search?pattern=...</code></div>
+  <div class="card"><b>CSRF</b><br><code>/api/transfer?to=...&amp;amount=...</code></div>
+  <div class="card"><b>Unrestricted Upload</b><br><code>POST /api/upload?filename=...</code></div>
+  <div class="card"><b>Verbose Error</b><br><code>/api/error</code></div>
+</body>
+</html>
